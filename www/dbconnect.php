@@ -1,7 +1,7 @@
 <?php
-$db_name = "testDB";
-$mysqli_username = "pi";
-$mysqli_password = "raspberry";
+$db_name = "users";
+$mysqli_username = "root";
+$mysqli_password = "";
 $mysqli_host = "localhost";
 
 
