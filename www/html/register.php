@@ -8,7 +8,7 @@ if(isset($_SESSION['user'])!="")
 
 if(isset($_POST['btn-signup']))
 {
-require_once('../dbconnect.php');
+require_once('C:/xampp/htdocs/dbconnect.php');
 
 
 	$uname = mysqli_real_escape_string($conn,$_POST['uname']);
@@ -24,12 +24,12 @@ require_once('../dbconnect.php');
 	$stmt = mysqli_query($conn, $query);
 	
 
-	$count = mysqli_affected_rows($stmt);// if email not found then register
+	$count = mysqli_affected_rows($conn);// if email not found then register
 
 	//$reg = mysqli_query($conn,"INSERT INTO users(user_name, email, user_pass) VALUES('$uname','$email','$upass')");
 	//echo ("count: "+mysqli_affected_rows($stmt));
 	
-	if(count == 0){
+	if($count == 0){
 		if(mysqli_query($conn,"INSERT INTO users(user_name, email, user_pass) VALUES('$uname','$email','$upass')"))
 		{
 			?>
@@ -40,7 +40,7 @@ require_once('../dbconnect.php');
 		{
 			?>
 			<script>alert('error while registering you...');</script>
-			<?php  echo mysqli_error();
+			<?php  
 		}
 	}
 	else{
