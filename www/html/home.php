@@ -41,22 +41,6 @@ $userRow=mysqli_fetch_array($res);
 <div id="body">
 <h2>Database</h2>
 <iframe src= "" height="200" width="1000"></iframe>
-<script>
-var data = JSON.stringify(false);
-
-var xhr = new XMLHttpRequest();
-xhr.withCredentials = true;
-
-xhr.addEventListener("readystatechange", function () {
-  if (this.readyState === this.DONE) {
-    console.log(this.responseText);
-  }
-});
-
-xhr.open("GET", "https://api.securitytrails.com/v1/ping?apikey=0rkV9wrAtOvgIrjQmfaaQKyxchPl1Lh0");
-
-xhr.send(data);
-</script>
 
 </div>
 
