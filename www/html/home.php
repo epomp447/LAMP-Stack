@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once ('C:/xampp/htdocs/dbconnect.php');
+require_once ('.../dbconnect.php');
 
 if(!isset($_SESSION['user']))
 {
